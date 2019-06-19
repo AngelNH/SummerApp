@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">VeranoApp</string>
+    <string name="StartMainBtn">Start Game</string>
+    <string name="instructionsGame">Join the numbers and get to the </string>
+    <string name="instr2Game">2048! tile! </string>
+    <string name="startActGameBtn">Restart</string>
+    <string name="Game_Name">2048</string>
+</resources>

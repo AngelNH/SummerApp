@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="btnColor">#cdc1b5</color>
+    <color name="gridColor">#bbada0</color>
+    <color name="orangeTextColor">#fe8205</color>
+    <color name="backgroundGameColor">  #fbf8ef</color>
+    <color name="color2Btn">            #FAEEE2</color>
+    <color name="color4Btn">            #F7D7B4</color>
+    <color name="color8Btn">            #F5A554</color>
+    <color name="color16Btn">           #F38F29</color>
+    <color name="color32Btn">           #F86E42</color>
+    <color name="color64Btn">           #F74D18</color>
+    <color name="color128Btn">          #F7EE52</color>
+    <color name="color256Btn">          #F8EE39</color>
+    <color name="color512Btn">          #e6b800</color>
+    <color name="color1024Btn">#EEC005</color>
+    <color name="color2048Btn">         #ffcc00</color>
+</resources>
