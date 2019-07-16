@@ -19,6 +19,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.GridLayout;
+import android.widget.TextView;
 
 import com.example.veranoapp.beans.Grid;
 import com.example.veranoapp.beans.OnSwipeTouchListener;
@@ -41,6 +42,9 @@ public class ActivityGame extends AppCompatActivity implements GestureDetector.O
     GestureDetector gestureDetector;
     Button scoreBtn,bestBtn;
     SharedPreferences settings;
+    TextView gameOver;
+
+    boolean isOver = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,6 +83,7 @@ public class ActivityGame extends AppCompatActivity implements GestureDetector.O
         mylayout = findViewById(R.id.activity_game_GridLayout);
         scoreBtn = findViewById(R.id.activity_game_score);
         bestBtn = findViewById(R.id.activity_game_best);
+        gameOver = findViewById(R.id.activity_game_GameOver);
 
         gestureDetector = new GestureDetector(this);
         //this may not work
@@ -87,18 +92,22 @@ public class ActivityGame extends AppCompatActivity implements GestureDetector.O
                 public void onSwipeTop() {
                     grid.swipeOnGrid(Grid.UP);
                     setScoreAndBest();
+                    isOver = grid.getIsOver();
                 }
                 public void onSwipeRight() {
                     grid.swipeOnGrid(Grid.RIGHT);
                     setScoreAndBest();
+                    isOver = grid.getIsOver();
                 }
                 public void onSwipeLeft() {
                     grid.swipeOnGrid(Grid.LEFT);
                     setScoreAndBest();
+                    isOver = grid.getIsOver();
                 }
                 public void onSwipeBottom() {
                     grid.swipeOnGrid(Grid.DOWN);
                     setScoreAndBest();
+                    isOver = grid.getIsOver();
                 }
             });
         }
@@ -115,6 +124,8 @@ public class ActivityGame extends AppCompatActivity implements GestureDetector.O
                grid.restartGrid();
                grid.addRandomNumber();
                setScoreAndBest();
+               gameOver.setVisibility(View.INVISIBLE);
+               mylayout.setVisibility(View.VISIBLE);
             }
         });
 
@@ -159,9 +170,11 @@ public class ActivityGame extends AppCompatActivity implements GestureDetector.O
             if(Math.abs(diffX)> SWIPE_THRESHOLD && Math.abs(vx)> VELOCITY_THRESHOLD){
                 if(diffX>0){
                     grid.swipeOnGrid(Grid.RIGHT);
+                    isOver = grid.getIsOver();
 
                 }else {
                     grid.swipeOnGrid(Grid.LEFT);
+                    isOver = grid.getIsOver();
                 }
                 result = true;
                 setScoreAndBest();
@@ -171,15 +184,21 @@ public class ActivityGame extends AppCompatActivity implements GestureDetector.O
             if(Math.abs(diffY) > SWIPE_THRESHOLD && Math.abs(vy)>VELOCITY_THRESHOLD){
                 if(diffY>0){
                     grid.swipeOnGrid(Grid.DOWN);
+                    isOver = grid.getIsOver();
                 }else{
                     grid.swipeOnGrid(Grid.UP);
+                    isOver = grid.getIsOver();
                 }
                 result = true;
                 setScoreAndBest();
 
             }
         }
+        if(isOver) {
 
+            gameOver.setVisibility(View.VISIBLE);
+            mylayout.setVisibility(View.INVISIBLE);
+        }
         return result;
     }
 
@@ -199,3 +218,5 @@ public class ActivityGame extends AppCompatActivity implements GestureDetector.O
         bestBtn.setText("BEST\n"+best);
     }
 }
+
+

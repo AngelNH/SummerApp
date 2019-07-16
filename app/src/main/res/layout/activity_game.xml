@@ -87,175 +87,205 @@
             android:layout_weight="1"/>
 
     </LinearLayout>
-    <GridLayout
-        android:id="@+id/activity_game_GridLayout"
-        android:layout_width="match_parent"
+
+    <FrameLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="6"
-        android:columnCount="4"
-        android:rowCount="4"
-        android:alignmentMode="alignMargins"
-        android:columnOrderPreserved="true"
-        android:padding="14dp"
-        android:layout_margin="2dp"
-        android:background="@color/gridColor">
+        android:layout_weight="6">
 
-        <!-- ROW 1-->
-        <Button
-            android:id="@+id/game_0_0"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:background="@color/btnColor"
-            android:layout_margin="3dp"
-            android:textSize="30dp"
-            android:text="2"/>
-        <Button
-            android:id="@+id/game_0_1"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_margin="3dp"
-            android:textSize="30dp"
-            android:background="@color/btnColor"/>
-        <Button
-            android:id="@+id/game_0_2"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_margin="3dp"
-            android:textSize="30dp"
-            android:background="@color/btnColor"/>
-        <Button
-            android:id="@+id/game_0_3"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_margin="3dp"
-            android:textSize="30dp"
-            android:background="@color/btnColor"/>
+        <TextView
+            android:id="@+id/activity_game_GameOver"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="GAME OVER!"
+            android:textSize="60dp"
+            android:gravity="center"
+            android:background="@color/colorGameOver"
+            android:textColor="@android:color/holo_red_light"
+            android:visibility="invisible"/>
 
+        <GridLayout
+            android:id="@+id/activity_game_GridLayout"
+            android:layout_width="382dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:alignmentMode="alignMargins"
+            android:background="@color/gridColor"
+            android:columnCount="4"
+            android:columnOrderPreserved="true"
+            android:padding="14dp"
+            android:rowCount="4"
+            android:visibility="visible">
 
-        <!-- ROW 2-->
-        <Button
-            android:id="@+id/game_1_0"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_margin="3dp"
-            android:textSize="30dp"
-            android:background="@color/btnColor"/>
-        <Button
-            android:id="@+id/game_1_1"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_margin="3dp"
-            android:textSize="30dp"
-            android:background="@color/btnColor"/>
-        <Button
-            android:id="@+id/game_1_2"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_margin="3dp"
-            android:textSize="30dp"
-            android:background="@color/btnColor"/>
-        <Button
-            android:id="@+id/game_1_3"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_margin="3dp"
-            android:textSize="30dp"
-            android:background="@color/btnColor"/>
+            <!-- ROW 1-->
+            <Button
+                android:id="@+id/game_0_0"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="@color/btnColor"
+                android:text="2"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/game_0_1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="@color/btnColor"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/game_0_2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="@color/btnColor"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/game_0_3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="@color/btnColor"
+                android:textSize="30dp" />
 
 
-        <!-- ROW 3-->
-        <Button
-            android:id="@+id/game_2_0"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_margin="3dp"
-            android:textSize="30dp"
-            android:background="@color/btnColor"/>
-        <Button
-            android:id="@+id/game_2_1"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_margin="3dp"
-            android:textSize="30dp"
-            android:background="@color/btnColor"/>
-        <Button
-            android:id="@+id/game_2_2"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_margin="3dp"
-            android:textSize="30dp"
-            android:background="@color/btnColor"/>
-        <Button
-            android:id="@+id/game_2_3"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_margin="3dp"
-            android:textSize="30dp"
-            android:background="@color/btnColor"/>
+            <!-- ROW 2-->
+            <Button
+                android:id="@+id/game_1_0"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="@color/btnColor"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/game_1_1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="@color/btnColor"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/game_1_2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="@color/btnColor"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/game_1_3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="@color/btnColor"
+                android:textSize="30dp" />
 
 
-        <!-- ROW 2-->
-        <Button
-            android:id="@+id/game_3_0"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_margin="3dp"
-            android:textSize="30dp"
-            android:background="@color/btnColor"/>
-        <Button
-            android:id="@+id/game_3_1"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_margin="3dp"
-            android:textSize="30dp"
-            android:background="@color/btnColor"/>
-        <Button
-            android:id="@+id/game_3_2"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_margin="3dp"
-            android:textSize="30dp"
-            android:background="@color/btnColor"/>
-        <Button
-            android:id="@+id/game_3_3"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_margin="3dp"
-            android:textSize="30dp"
-            android:background="@color/btnColor"/>
+            <!-- ROW 3-->
+            <Button
+                android:id="@+id/game_2_0"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="@color/btnColor"
+                android:textSize="30dp" />
 
-    </GridLayout>
+            <Button
+                android:id="@+id/game_2_1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="@color/btnColor"
+                android:textSize="30dp" />
 
+            <Button
+                android:id="@+id/game_2_2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="@color/btnColor"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/game_2_3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="@color/btnColor"
+                android:textSize="30dp" />
+
+
+            <!-- ROW 2-->
+            <Button
+                android:id="@+id/game_3_0"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="@color/btnColor"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/game_3_1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="@color/btnColor"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/game_3_2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="@color/btnColor"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/game_3_3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:background="@color/btnColor"
+                android:textSize="30dp" />
+
+        </GridLayout>
+    </FrameLayout>
 </LinearLayout>

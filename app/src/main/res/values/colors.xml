@@ -18,4 +18,5 @@
     <color name="color512Btn">          #e6b800</color>
     <color name="color1024Btn">#EEC005</color>
     <color name="color2048Btn">         #ffcc00</color>
+    <color name="colorGameOver">#C7C9BF</color>
 </resources>

@@ -25,6 +25,7 @@ public class Grid {
     private int score;
     private int best;
     private Context context;
+    private boolean isOver = false;
 
     public Grid(int size){
         this.gridSquares = new Square[size][size];
@@ -124,6 +125,7 @@ public class Grid {
                     break;
         }
         if(hasMoved) this.addRandomNumber();
+            else isOver = true;
         if(score>best) best = score;
     }
 
@@ -267,5 +269,6 @@ public class Grid {
     public int getScore(){
         return score;
     }
+    public  boolean getIsOver() { return  isOver; }
 
 }
