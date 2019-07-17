@@ -100,9 +100,10 @@
             android:text="GAME OVER!"
             android:textSize="60dp"
             android:gravity="center"
-            android:background="@color/colorGameOver"
+            android:background="@color/gridColorGameOver"
             android:textColor="@android:color/holo_red_light"
-            android:visibility="invisible"/>
+            android:visibility="invisible"
+            android:elevation="8dp"/>
 
         <GridLayout
             android:id="@+id/activity_game_GridLayout"

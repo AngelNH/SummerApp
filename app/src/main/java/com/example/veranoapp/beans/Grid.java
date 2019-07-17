@@ -269,6 +269,42 @@ public class Grid {
     public int getScore(){
         return score;
     }
-    public  boolean getIsOver() { return  isOver; }
 
+    public  boolean getIsOver() {
+        if(isFull()) {
+            for (int x = 1; x < this.gridSquares.length - 1; x++) {
+                for (int y = 0; y < this.gridSquares.length - 1; y++) {
+                    if (this.gridSquares[x][y] == this.gridSquares[x - 1][y] ||
+                            this.gridSquares[x][y] == this.gridSquares[x + 1][y])
+                        return false;
+                    else if (y > 0 && (this.gridSquares[x][y] == this.gridSquares[x][y - 1] ||
+                            this.gridSquares[x][y + 1] == this.gridSquares[x][y - 1]))
+                        return false;
+                }
+            }
+            return true;
+        }
+        return false;
+    }
+
+    private boolean isFull(){
+        for (int x = 0; x < this.gridSquares.length; x++){
+            for (int y = 0; y < this.gridSquares.length; y++) {
+                if (this.gridSquares[x][y].getValue()==0) {
+                    toStringGrid();
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    private void toStringGrid(){
+        for (int x=0;x<gridSquares.length;x++){
+            for (int y=0; y<gridSquares.length; y++){
+                System.out.print(gridSquares[x][y].getValue());
+            }
+            System.out.print("\n");
+        }
+    }
 }

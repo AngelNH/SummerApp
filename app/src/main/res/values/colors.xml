@@ -5,6 +5,7 @@
     <color name="colorAccent">#D81B60</color>
     <color name="btnColor">#cdc1b5</color>
     <color name="gridColor">#bbada0</color>
+    <color name="gridColorGameOver">#80EBDED5</color>
     <color name="orangeTextColor">#fe8205</color>
     <color name="backgroundGameColor">  #fbf8ef</color>
     <color name="color2Btn">            #FAEEE2</color>

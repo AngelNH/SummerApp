@@ -195,9 +195,9 @@ public class ActivityGame extends AppCompatActivity implements GestureDetector.O
             }
         }
         if(isOver) {
-
+            System.out.println("IS OVER");
             gameOver.setVisibility(View.VISIBLE);
-            mylayout.setVisibility(View.INVISIBLE);
+            //mylayout.setVisibility(View.INVISIBLE);
         }
         return result;
     }
