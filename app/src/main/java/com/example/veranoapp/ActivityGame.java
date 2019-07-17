@@ -85,6 +85,8 @@ public class ActivityGame extends AppCompatActivity implements GestureDetector.O
         bestBtn = findViewById(R.id.activity_game_best);
         gameOver = findViewById(R.id.activity_game_GameOver);
 
+        bestBtn.setText("BEST\n"+best);
+
         gestureDetector = new GestureDetector(this);
         //this may not work
         for (View v : viewsId){
